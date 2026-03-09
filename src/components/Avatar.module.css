@@ -1,0 +1,92 @@
+.avatarContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatarGlow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  height: 85%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.avatarGlow.speaking {
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.2) 0%, rgba(34, 211, 238, 0.05) 50%, transparent 70%);
+  animation: avatarPulse 1.5s ease-in-out infinite;
+}
+
+.avatarCanvas {
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.statusIndicator {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.7rem;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  font-size: 0.65rem;
+  color: #94A3B8;
+  z-index: 3;
+  white-space: nowrap;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.statusDot.idle {
+  background: #10B981;
+}
+
+.statusDot.speaking {
+  background: #22D3EE;
+  animation: dotPulse 1s ease-in-out infinite;
+}
+
+.statusDot.thinking {
+  background: #F59E0B;
+  animation: dotPulse 0.8s ease-in-out infinite;
+}
+
+.statusDot.listening {
+  background: #EF4444;
+  animation: dotPulse 0.6s ease-in-out infinite;
+}
+
+.statusText {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+@keyframes avatarPulse {
+  0%, 100% { opacity: 0.7; transform: translateX(-50%) scale(1); }
+  50% { opacity: 1; transform: translateX(-50%) scale(1.05); }
+}
+
+@keyframes dotPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.5); }
+}

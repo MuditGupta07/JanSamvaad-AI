@@ -1,0 +1,219 @@
+.adminMain {
+  padding-top: 64px;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 6rem 2rem 4rem;
+}
+
+.adminContainer {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.adminHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.adminTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #E2E8F0;
+  margin-bottom: 0.5rem;
+}
+
+.adminSubtitle {
+  color: #94A3B8;
+  font-size: 1rem;
+}
+
+.adminGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.formCard, .previewCard {
+  padding: 1.75rem;
+}
+
+.formTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #E2E8F0;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.fieldLabel {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #94A3B8;
+}
+
+.fieldInput {
+  padding: 0.65rem 0.85rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #E2E8F0;
+  font-size: 0.85rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.fieldInput:focus {
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.fieldInput::placeholder {
+  color: #475569;
+}
+
+.roleOptions {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.roleBtn {
+  padding: 0.5rem 0.85rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  color: #94A3B8;
+  font-size: 0.8rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.roleBtn:hover {
+  background: rgba(16, 185, 129, 0.06);
+}
+
+.roleBtn.roleActive {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: #10B981;
+}
+
+.fileUpload {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.85rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: #64748B;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fileUpload:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.fileIcon {
+  font-size: 1.1rem;
+}
+
+.formActions {
+  margin-top: 0.5rem;
+}
+
+.successMsg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(16, 185, 129, 0.06);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  border-radius: 12px;
+  text-align: center;
+  color: #34D399;
+  font-size: 0.9rem;
+  animation: fadeInUp 0.5s ease;
+}
+
+.successIcon {
+  font-size: 1.5rem;
+}
+
+/* Preview */
+.previewContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.previewInfo {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.previewName {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #E2E8F0;
+}
+
+.previewRole {
+  font-size: 0.8rem;
+  color: #10B981;
+}
+
+.previewVoice {
+  font-size: 0.75rem;
+  color: #64748B;
+}
+
+.previewDemo {
+  margin-top: 0.5rem;
+}
+
+.createdBadge {
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(34, 211, 238, 0.08));
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 9999px;
+  color: #34D399;
+  font-weight: 600;
+  font-size: 0.85rem;
+  animation: fadeInUp 0.5s ease;
+}
+
+@media (max-width: 768px) {
+  .adminGrid {
+    grid-template-columns: 1fr;
+  }
+  .adminTitle { font-size: 1.75rem; }
+  .adminMain { padding: 5rem 1rem 2rem; }
+}
